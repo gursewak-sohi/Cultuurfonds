@@ -18,7 +18,6 @@ footer {
         flex-direction: column-reverse;
         align-items: flex-start;
         max-width: 342px;
-        row-gap: 30px;
         margin: 0 auto;
     }
     & ul {
@@ -28,12 +27,16 @@ footer {
         @include tablet {
             flex-direction: column;
             align-items: flex-start;
-            row-gap: 30px;
+        }
+        & li {
+            @include tablet {
+                margin-top: 30px;
+            }
         }
     }
     & .footer-copyright {
         @include tablet {
-            margin-top: 20px;
+            margin-top: 50px;
         }
     }
 }
