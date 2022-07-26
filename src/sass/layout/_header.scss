@@ -1,0 +1,157 @@
+// Header SCSS
+header {
+    padding: 41px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 89;
+    @include tablet {
+        padding: 24px 0;
+        transform: none !important;
+    }
+    & .logo {
+        @include tablet {
+            width: 177px;
+        }
+    }
+}
+
+.header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    @include tablet {
+        justify-content: center;
+    }
+}
+
+.btn-menu {
+    padding: 5px;
+    margin-left: -5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    display: none;
+    @include tablet {
+        display: flex;
+    }
+}
+
+.menu-block {
+    @include tablet {
+        position: fixed;
+        height: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        padding-right: 34px;
+        border: none;
+        background-color: rgba($black, 0.5);
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s all ease;
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        & .menu {
+            @include tablet {
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+    @include laptop {
+        column-gap: 35px;
+    }
+    @include tablet {
+        flex: 1;
+        background-color: $primary;
+        flex-direction: column;
+        max-width: 380px;
+        transition: 0.3s all ease;
+        transform: translateX(-100%);
+    }
+    & .menu-header {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        font-size: 16px;
+        align-items: center;
+        padding: 20px 35px;
+        font-weight: 500;
+        width: 100%;
+        color: $black;
+        transition: $link-transition;
+        display: none;
+        @include tablet {
+            display: flex;
+        }
+        &:hover {
+            opacity: 1;
+        }
+        & img {
+            margin-right: 8px;
+        }
+    }
+    & ul {
+        display: flex;
+        align-items: center;
+        column-gap: 49px;
+        @include laptop {
+            column-gap: 30px;
+        }
+        @include tablet {
+            flex-direction: column;
+            border-top: 1px solid rgba($black, 10%);
+            width: 100%;
+        }
+        & li {
+            @include tablet {
+                width: 100%;
+            }
+        }
+        & a {
+            font-size: 16px;
+            font-weight: 500;
+            @include tablet {
+                display: block;
+                padding: 19px 35px;
+                border-bottom: 1px solid rgba($black, 10%);
+            }
+        }
+    }
+    & .btn-request {
+        display: block;
+        border: 1.5px solid $black;
+        width: 147px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 22px;
+        padding: 5px 0 6.5px;
+        transition: $btn-transition;
+        @include tablet {
+            width: calc(100% - 70px);
+            padding: 8px 0 10px;
+            margin-top: 30px;
+        }
+        &:hover {
+            background-color: $black;
+            color: $primary;
+        }
+    }
+}

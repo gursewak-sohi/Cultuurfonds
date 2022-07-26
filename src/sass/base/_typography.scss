@@ -1,0 +1,33 @@
+// Typography SCSS
+a {
+    color: $link;
+    &:hover {
+        color: lighten($link, 30%);
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+body {
+    font-family: $font-noto;
+    font-weight: 400;
+    color: $black;
+    font-size: 19px;
+    line-height: 26px;
+    @include tablet {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+p {
+    font-size: 19px;
+    line-height: 26px;
+    @include tablet {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

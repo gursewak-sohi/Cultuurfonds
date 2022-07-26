@@ -1,0 +1,39 @@
+// Footer SCSS
+footer {
+    padding: 70px 0 90px;
+    @include tablet {
+        border-top: 1px solid rgba($black, 10%);
+        padding: 52px 0 52px;
+    }
+}
+
+.footer-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    @include tablet {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        max-width: 342px;
+        row-gap: 30px;
+        margin: 0 auto;
+    }
+    & ul {
+        display: flex;
+        align-items: center;
+        column-gap: 61px;
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 30px;
+        }
+    }
+    & .footer-copyright {
+        @include tablet {
+            margin-top: 20px;
+        }
+    }
+}

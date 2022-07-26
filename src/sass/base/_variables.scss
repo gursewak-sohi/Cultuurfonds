@@ -1,0 +1,24 @@
+// Variable SCSS
+// Fonts
+$font-noto: ('Noto Sans', sans-serif);
+// Colors
+$primary: #FAF7F2;
+$link: #000000;
+$black: #000000;
+$white: #ffffff;
+// Breakpoints
+$mobile-width: 767px;
+$tablet-width: 1023px;
+$laptop-width: 1150px;
+$desktop-width: 1399px;
+// Container Sizes
+$container: 1261px;
+$gutter-x: 36px;
+$gutter-x-xs: 36px;
+// Transition
+$link-transition: 300ms color ease,
+300ms opacity ease;
+$btn-transition: 300ms background-color ease,
+300ms color ease,
+300ms border-color ease,
+300ms opacity ease;
